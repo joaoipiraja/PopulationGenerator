@@ -11,6 +11,7 @@
 		4EB381EA2A1E51AC00D28F5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB381E92A1E51AC00D28F5B /* ContentView.swift */; };
 		4EB381EC2A1E51AE00D28F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB381EB2A1E51AE00D28F5B /* Assets.xcassets */; };
 		4EB381EF2A1E51AE00D28F5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB381EE2A1E51AE00D28F5B /* Preview Assets.xcassets */; };
+		4EB381F62A1E51D000D28F5B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB381F52A1E51D000D28F5B /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4EB381E92A1E51AC00D28F5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4EB381EB2A1E51AE00D28F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB381EE2A1E51AE00D28F5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4EB381F52A1E51D000D28F5B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		4EB381E62A1E51AC00D28F5B /* PopulationGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				4EB381F52A1E51D000D28F5B /* ViewModel.swift */,
 				4EB381E72A1E51AC00D28F5B /* PopulationGeneratorApp.swift */,
 				4EB381E92A1E51AC00D28F5B /* ContentView.swift */,
 				4EB381EB2A1E51AE00D28F5B /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB381EA2A1E51AC00D28F5B /* ContentView.swift in Sources */,
+				4EB381F62A1E51D000D28F5B /* ViewModel.swift in Sources */,
 				4EB381E82A1E51AC00D28F5B /* PopulationGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
