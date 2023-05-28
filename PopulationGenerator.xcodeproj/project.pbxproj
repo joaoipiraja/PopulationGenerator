@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E6EE8D62A22CD630070D815 /* BigToBatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6EE8D52A22CD630070D815 /* BigToBatches.swift */; };
+		4E6EE8D82A22D0EA0070D815 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6EE8D72A22D0EA0070D815 /* Model.swift */; };
+		4E6EE8DC2A22D3770070D815 /* IOHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6EE8DB2A22D3770070D815 /* IOHandler.swift */; };
 		4EB381E82A1E51AC00D28F5B /* PopulationGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB381E72A1E51AC00D28F5B /* PopulationGeneratorApp.swift */; };
 		4EB381EA2A1E51AC00D28F5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB381E92A1E51AC00D28F5B /* ContentView.swift */; };
 		4EB381EC2A1E51AE00D28F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB381EB2A1E51AE00D28F5B /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E6EE8D52A22CD630070D815 /* BigToBatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigToBatches.swift; sourceTree = "<group>"; };
+		4E6EE8D72A22D0EA0070D815 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4E6EE8DB2A22D3770070D815 /* IOHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOHandler.swift; sourceTree = "<group>"; };
 		4EB381E42A1E51AC00D28F5B /* PopulationGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopulationGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB381E72A1E51AC00D28F5B /* PopulationGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationGeneratorApp.swift; sourceTree = "<group>"; };
 		4EB381E92A1E51AC00D28F5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,10 +60,13 @@
 			isa = PBXGroup;
 			children = (
 				4EB381F52A1E51D000D28F5B /* ViewModel.swift */,
+				4E6EE8D72A22D0EA0070D815 /* Model.swift */,
 				4EB381E72A1E51AC00D28F5B /* PopulationGeneratorApp.swift */,
+				4E6EE8D52A22CD630070D815 /* BigToBatches.swift */,
 				4EB381E92A1E51AC00D28F5B /* ContentView.swift */,
 				4EB381EB2A1E51AE00D28F5B /* Assets.xcassets */,
 				4EB381ED2A1E51AE00D28F5B /* Preview Content */,
+				4E6EE8DB2A22D3770070D815 /* IOHandler.swift */,
 			);
 			path = PopulationGenerator;
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6EE8DC2A22D3770070D815 /* IOHandler.swift in Sources */,
+				4E6EE8D82A22D0EA0070D815 /* Model.swift in Sources */,
+				4E6EE8D62A22CD630070D815 /* BigToBatches.swift in Sources */,
 				4EB381EA2A1E51AC00D28F5B /* ContentView.swift in Sources */,
 				4EB381F62A1E51D000D28F5B /* ViewModel.swift in Sources */,
 				4EB381E82A1E51AC00D28F5B /* PopulationGeneratorApp.swift in Sources */,

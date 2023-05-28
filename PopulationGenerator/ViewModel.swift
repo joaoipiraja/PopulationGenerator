@@ -7,22 +7,14 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 
-struct Person: Codable{
-    var id: UUID = .init()
-    var idade: Int
-    var altura: Float
-    var peso: Float
-}
 
-
-class ViewModel: ObservableObject{
-    
-    var model: Array<Person> = []
-    @Published var averageAltura: Float = 0.0
-    @Published var progress: Double = 0.0
-    @Published var isResponseRunning: Bool = false
+class PopulationGenerator: ObservableObject{
+    var ioOperaation: IOOperation<Array<Person>> = .init()
+    var subjectPop: PassthroughSubject<ResponsePopulation, Never> = .init()
+    let division = Division<Person, ResponsePopulation>()
     
     private func generatePerson() -> Person{
         let idade = Int.random(in: 0...100)
@@ -31,19 +23,34 @@ class ViewModel: ObservableObject{
         return .init(idade: idade, altura: altura, peso: peso)
     }
     
-    func generatePopulation(ofSize size: Int){
+    
+    func generatePopulation(ofSize size: Int) async{
         
-        isResponseRunning = false
-        progress = 0.0
+        let separator: Character = "\n"
+
+        await self.division.bigToBatches(size: size, content: {
+            return self.generatePerson()
+        }, completion: { persons, respPop in
+            let data = try! JSONEncoder().encode(persons) + String(separator).data(using: .utf8)!
+            self.ioOperaation.save(data: data)
+            self.subjectPop.send(respPop)
+        })
+        subjectPop.send(completion: .finished)
         
-        self.model = (0...size).map {_ in
-            return generatePerson()
-        }
-        isResponseRunning = true
-        progress = 100.0
-        averageAltura = self.model.reduce(Float(0.0), { partialResult, person in
-            return partialResult + person.altura
-        }) / Float(self.model.count)
+    }
+    
+    
+}
+
+
+class ViewModel: ObservableObject{
+    
+    var pop: PopulationGenerator = .init()
+    @Published var averageAltura: Float = 0.0
+    let size = 100000000000
+    
+    func run() async{
+        await self.pop.generatePopulation(ofSize: size)
     }
     
     
